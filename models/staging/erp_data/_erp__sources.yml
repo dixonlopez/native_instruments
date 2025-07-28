@@ -1,0 +1,69 @@
+version: 2
+
+sources:
+  - name: erp_data
+    description: "Contains raw financial data extracted from the primary ERP system."
+    database: my_database
+    schema: finance_raw_data
+
+    tables:
+      - name: general_ledger_headers
+        description: "Contains header-level information for each journal entry, such as dates and descriptions."
+        columns:
+          - name: header_id
+            description: "Primary key for the general ledger header."
+            tests:
+              - unique
+              - not_null
+          - name: posting_date
+            description: "The date the transaction was posted to the general ledger. Crucial for reporting."
+            tests:
+              - not_null
+
+      - name: general_ledger_lines
+        description: "Contains the individual debit and credit lines for each journal entry."
+        columns:
+          - name: line_id
+            description: "Primary key for the general ledger line item."
+            tests:
+              - unique
+              - not_null
+          - name: header_id
+            description: "Foreign key to the general_ledger_headers table."
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('stg_erp_data__gl_headers')
+                  field: header_id
+          - name: combination_id
+            description: "Foreign key to the code_combinations table."
+            tests:
+              - not_null
+
+      - name: code_combinations
+        description: "Defines the valid combinations of accounting segments (company, account, cost center, etc.)."
+        columns:
+          - name: combination_id
+            description: "Primary key for the code combination."
+            tests:
+              - unique
+              - not_null
+          - name: account_code
+            description: "The natural account code. Foreign key to the account hierarchies."
+            tests:
+              - not_null
+
+      - name: account_hierarchies
+        description: "Defines the chart of accounts, including descriptions and hierarchies for reporting."
+        columns:
+          - name: account_code
+            description: "Primary key for an account in the chart of accounts."
+            tests:
+              - unique
+              - not_null
+          - name: account_type
+            description: "The type of account (e.g., Asset, Liability, Revenue, Expense)."
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['Asset', 'Liability', 'Equity', 'Revenue', 'Expense']
