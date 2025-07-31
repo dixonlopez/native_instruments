@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: int_account_hierarchy_unpacked
+    description: "A table that unpacks the parent-child account hierarchy using a recursive CTE, showing the full lineage for each account."
+
+  - name: int_transactions_enriched
+    description: "The primary intermediate model that joins the staged transactions with all dimensional data (accounts, hierarchy, code combinations) to create a single, fully enriched and denormalized dataset."

@@ -1,0 +1,112 @@
+version: 2
+
+models:
+  - name: base_erp__accounts
+    description: "Cleansed and formatted chart of accounts from the source seed."
+    columns:
+      - name: account_id
+        description: "The primary key for an account."
+        tests:
+          - unique
+          - not_null
+      - name: account_type
+        tests:
+          - accepted_values:
+              values: ['ASSET', 'LIABILITY', 'EQUITY', 'REVENUE', 'EXPENSE']
+      - name: financial_statement
+        tests:
+          - accepted_values:
+              values: ['Balance Sheet', 'P&L']
+
+  - name: base_erp__gl_headers
+    description: "Cleansed and formatted general ledger journal entry headers."
+    columns:
+      - name: journal_id
+        description: "The primary key for a journal entry."
+        tests:
+          - unique
+          - not_null
+      - name: entry_date
+        tests:
+          - not_null
+
+  - name: base_erp__gl_lines
+    description: "Cleansed and formatted general ledger transaction lines."
+    columns:
+      - name: line_id
+        description: "The primary key for a transaction line."
+        tests:
+          - unique
+          - not_null
+      - name: journal_id
+        description: "Foreign key to the gl_headers table."
+        tests:
+          - relationships:
+              to: ref('base_erp__gl_headers')
+              field: journal_id
+      - name: account_id
+        description: "Foreign key to the accounts table."
+        tests:
+          - relationships:
+              to: ref('base_erp__accounts')
+              field: account_id
+      - name: debit_amount
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+      - name: credit_amount
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+  - name: base_erp__account_hierarchies
+    description: "Cleansed and formatted account hierarchy relationships."
+    columns:
+      - name: hierarchy_id
+        description: "The primary key for the hierarchy relationship."
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        tests:
+          - relationships:
+              to: ref('base_erp__accounts')
+              field: account_id
+      - name: parent_account_id
+        tests:
+          - relationships:
+              to: ref('base_erp__accounts')
+              field: account_id
+              
+  - name: base_erp__code_combinations
+    description: "Cleansed and formatted code combinations, linking business segments (company, department) to a natural account."
+    columns:
+      - name: code_combination_id
+        description: "The primary key for the code combination."
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: "Foreign key to the accounts table."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('base_erp__accounts')
+              field: account_id
+
+  - name: stg_erp__gl_transactions
+    description: "Unifies GL lines and headers into a single transaction record. This serves as the base for all further financial analysis."
+    columns:
+      - name: line_id
+        description: "The primary key of the transaction line."
+        tests:
+          - unique
+          - not_null
+      - name: journal_id
+        description: "The primary key of the journal entry."
+        tests:
+          - not_null
+      - name: account_id
+        description: "The foreign key to the accounts table."
+        tests:
+          - not_null
