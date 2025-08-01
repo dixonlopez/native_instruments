@@ -1,0 +1,19 @@
+models:
+  - name: fct_product_usage_summary
+    description: "A unified summary table providing both Daily Active Users (DAU) and Monthly Active Users (MAU) per product. This is the primary table for stakeholder consumption."
+    columns:
+      - name: metric_date
+        description: "The date (for DAU) or the first day of the month (for MAU) for the metric."
+        tests:
+          - not_null
+      - name: product_id
+        description: "The product identifier."
+        tests:
+          - not_null
+      - name: metric_type
+        description: "The type of metric, either 'DAU' or 'MAU'."
+        tests:
+          - accepted_values:
+              values: ['DAU', 'MAU']
+      - name: metric_value
+        description: "The calculated value for the metric (e.g., the count of active users)."
