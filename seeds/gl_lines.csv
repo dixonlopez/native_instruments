@@ -1,0 +1,9 @@
+line_id,journal_id,account_id,description,debit,credit
+1001,101,6001,Purchase of pens and paper,500,0
+1002,101,1002,Payment from bank account,0,500
+2001,102,6002,Monthly license for CRM,1200,0
+2002,102,1002,Payment from bank account,0,1200
+3001,103,1001,Cash received for Project A,10000,0
+3002,103,4001,Revenue recognized for Project A,0,10000
+4001,104,2002,Repayment of bank loan,2500,0
+4002,104,1001,Cash paid for loan,0,2500

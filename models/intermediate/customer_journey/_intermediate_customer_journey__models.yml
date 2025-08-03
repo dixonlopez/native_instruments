@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_customer_events_unioned
+    description: "Unifies all customer interaction points from different sources into a single chronological stream of events. This is the foundational model for building the customer journey."
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
+  - name: int_customer_journey_events
+    description: "Enriches the unified event stream with calculated, event-level metrics like purchase number and running total spend, creating the complete customer 'movie'."
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null

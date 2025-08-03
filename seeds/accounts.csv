@@ -1,0 +1,14 @@
+account_id,account_code,account_name,account_type,financial_statement
+1001,10001,Cash,ASSET,Balance Sheet
+1002,10002,Bank Account,ASSET,Balance Sheet
+2001,20001,Accounts Payable,LIABILITY,Balance Sheet
+2002,20002,Bank Loan,LIABILITY,Balance Sheet
+3001,30001,Common Stock,EQUITY,Balance Sheet
+4001,40001,Consulting Revenue,REVENUE,P&L
+6001,60001,Office Supplies Expense,EXPENSE,P&L
+6002,60002,Software Expense,EXPENSE,P&L
+9001,A001,Total Current Assets,ASSET,Balance Sheet
+9002,L001,Total Liabilities,LIABILITY,Balance Sheet
+9003,E001,Total Equity,EQUITY,Balance Sheet
+9004,R001,Total Revenue,REVENUE,P&L
+9005,X001,Total Expenses,EXPENSE,P&L

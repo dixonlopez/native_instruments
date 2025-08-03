@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: mart_customer_journey
+    description: "The primary event-level fact table showing the complete, chronological history of every customer interaction. This is the foundational mart for all other aggregated models."
+  - name: dim_customers_enriched
+    description: "An enriched customer dimension providing a 360-degree view with key lifetime metrics. Ideal for customer segmentation."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+  - name: agg_customer_monthly_summary
+    description: "A monthly summary of customer purchase behavior, optimized for trend analysis."
+  - name: fct_customer_product_summary
+    description: "A fact table at the customer-product grain, used to calculate product-specific adoption metrics like time-to-first-use."

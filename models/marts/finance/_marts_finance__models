@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: fct_gl_transactions
+    description: |
+      Final fact table for GL transactions. 
+      This model is intentionally denormalized by joining all relevant dimensional data in the intermediate layer.
+      This provides a single, wide table for end-users in Google Sheets, eliminating the need for them to perform complex joins.
+      It is materialized as an incremental table to efficiently handle the 15+ years of historical data.
+    columns:
+      - name: line_id
+        description: "The primary key of the transaction line."
+        tests:
+          - unique
+          - not_null
+      - name: company_code
+        tests:
+          - not_null
+      - name: department_code
+        tests:
+          - not_null
+
+  - name: balance_sheet_report
+    description: "Generates a monthly snapshot of the balance sheet. It calculates the closing balance for each account at the end of each month, allowing for historical point-in-time analysis. This model is ready for consumption in Google Sheets."
+    columns:
+      - name: balance_month
+        description: "The month for which the closing balance is calculated."
+        tests:
+          - not_null
+      - name: account_id
+        tests:
+          - not_null
+      - name: closing_balance
+        description: "The cumulative balance for the account at the end of the specified month."
+
+  - name: pnl_report
+    description: "Final aggregated P&L report showing net movement by month for each account, sliced by available dimensions. This model is ready for consumption in Google Sheets."
+    columns:
+      - name: account_id
+        tests:
+          - not_null
+      - name: period_net_movement
+        description: "The net movement (revenue - expenses) for the account in a given month."

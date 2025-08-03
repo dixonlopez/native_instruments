@@ -1,0 +1,9 @@
+order_id,customer_id,product_id,order_timestamp,sale_amount,currency
+ord_001,cust_101,P1,2025-01-15 10:00:00,99,EUR
+ord_002,cust_102,P2,2025-01-20 11:30:00,599,EUR
+ord_003,cust_103,P3,2025-02-10 09:00:00,199,EUR
+ord_004,cust_101,P2,2025-03-05 14:00:00,599,EUR
+ord_005,cust_104,P1,2025-03-12 16:20:00,99,EUR
+ord_006,cust_102,P3,2025-04-25 18:00:00,199,EUR
+ord_007,cust_105,P2,2025-05-01 10:45:00,599,EUR
+ord_008,cust_101,P3,2025-05-20 11:00:00,199,EUR

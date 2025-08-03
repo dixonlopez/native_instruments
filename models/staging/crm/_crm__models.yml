@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: base_customers
+    description: "Cleansed and casted customer data from the CRM source."
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null

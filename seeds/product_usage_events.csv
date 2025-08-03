@@ -1,0 +1,121 @@
+event_id,user_id,product_id,event_timestamp,event_type
+1,user_101,Komplete Kontrol,2025-06-01 08:05:21,app_opened
+2,user_102,Maschine,2025-06-01 09:15:11,project_saved
+3,user_103,Traktor Pro,2025-06-01 10:30:45,track_loaded
+4,user_101,Komplete Kontrol,2025-06-01 11:00:00,preset_loaded
+5,user_104,Maschine,2025-06-02 14:22:30,app_opened
+6,user_102,Maschine,2025-06-02 15:00:50,track_exported
+7,user_105,Traktor Pro,2025-06-03 18:00:15,app_opened
+8,user_101,Komplete Kontrol,2025-06-03 19:45:00,project_saved
+9,user_103,Traktor Pro,2025-06-04 20:00:00,track_loaded
+10,user_106,Maschine,2025-06-05 08:30:00,app_opened
+11,user_101,Komplete Kontrol,2025-06-05 09:00:00,preset_loaded
+12,user_102,Maschine,2025-06-06 12:00:00,project_saved
+13,user_107,Traktor Pro,2025-06-07 13:00:00,app_opened
+14,user_104,Maschine,2025-06-08 16:00:00,track_exported
+15,user_101,Komplete Kontrol,2025-06-10 10:00:00,app_opened
+16,user_105,Traktor Pro,2025-06-12 21:00:00,track_loaded
+17,user_102,Maschine,2025-06-15 11:00:00,app_opened
+18,user_108,Komplete Kontrol,2025-06-18 22:00:00,preset_loaded
+19,user_103,Traktor Pro,2025-06-20 23:00:00,project_saved
+20,user_106,Maschine,2025-06-25 14:00:00,track_exported
+21,user_101,Komplete Kontrol,2025-06-28 17:00:00,app_opened
+22,user_107,Traktor Pro,2025-06-30 18:00:00,track_loaded
+23,user_102,Maschine,2025-07-01 09:20:15,app_opened
+24,user_101,Komplete Kontrol,2025-07-01 10:00:30,preset_loaded
+25,user_109,Traktor Pro,2025-07-02 11:00:00,app_opened
+26,user_104,Maschine,2025-07-02 12:30:00,project_saved
+27,user_101,Komplete Kontrol,2025-07-03 14:00:00,track_exported
+28,user_102,Maschine,2025-07-03 15:00:00,app_opened
+29,user_105,Traktor Pro,2025-07-04 16:00:00,track_loaded
+30,user_110,Komplete Kontrol,2025-07-05 17:00:00,app_opened
+31,user_103,Traktor Pro,2025-07-05 18:00:00,project_saved
+32,user_106,Maschine,2025-07-06 19:00:00,app_opened
+33,user_101,Komplete Kontrol,2025-07-06 20:00:00,preset_loaded
+34,user_102,Maschine,2025-07-07 21:00:00,track_exported
+35,user_107,Traktor Pro,2025-07-08 22:00:00,app_opened
+36,user_104,Maschine,2025-07-09 23:00:00,project_saved
+37,user_101,Komplete Kontrol,2025-07-10 08:00:00,app_opened
+38,user_108,Komplete Kontrol,2025-07-12 09:00:00,preset_loaded
+39,user_105,Traktor Pro,2025-07-15 12:00:00,track_loaded
+40,user_102,Maschine,2025-07-18 13:00:00,app_opened
+41,user_109,Traktor Pro,2025-07-20 14:00:00,project_saved
+42,user_106,Maschine,2025-07-22 15:00:00,track_exported
+43,user_101,Komplete Kontrol,2025-07-25 16:00:00,app_opened
+44,user_110,Komplete Kontrol,2025-07-28 17:00:00,preset_loaded
+45,user_103,Traktor Pro,2025-07-30 18:00:00,track_loaded
+46,user_102,Maschine,2025-07-31 19:00:00,app_opened
+47,user_101,Komplete Kontrol,2025-08-01 08:10:25,app_opened
+48,user_104,Maschine,2025-08-01 09:00:00,project_saved
+49,user_107,Traktor Pro,2025-08-01 10:00:00,track_loaded
+50,user_101,Komplete Kontrol,2025-08-01 11:30:00,preset_loaded
+51,user_111,Maschine,2025-08-02 14:00:00,app_opened
+52,user_102,Maschine,2025-08-02 15:45:10,track_exported
+53,user_109,Traktor Pro,2025-08-03 18:20:00,app_opened
+54,user_101,Komplete Kontrol,2025-08-03 19:00:00,project_saved
+55,user_103,Traktor Pro,2025-08-04 20:15:00,track_loaded
+56,user_110,Maschine,2025-08-05 08:00:00,app_opened
+57,user_101,Komplete Kontrol,2025-08-05 09:30:00,preset_loaded
+58,user_102,Maschine,2025-08-06 12:10:00,project_saved
+59,user_105,Traktor Pro,2025-08-07 13:00:00,app_opened
+60,user_104,Maschine,2025-08-08 16:00:00,track_exported
+61,user_101,Komplete Kontrol,2025-08-10 10:00:00,app_opened
+62,user_108,Komplete Kontrol,2025-08-12 21:00:00,track_loaded
+63,user_102,Maschine,2025-08-15 11:00:00,app_opened
+64,user_112,Komplete Kontrol,2025-08-18 22:00:00,preset_loaded
+65,user_103,Traktor Pro,2025-08-20 23:00:00,project_saved
+66,user_106,Maschine,2025-08-25 14:00:00,track_exported
+67,user_101,Komplete Kontrol,2025-08-28 17:00:00,app_opened
+68,user_107,Traktor Pro,2025-08-30 18:00:00,track_loaded
+69,user_102,Maschine,2025-08-31 19:00:00,app_opened
+70,user_101,Komplete Kontrol,2025-06-02 08:05:21,app_opened
+71,user_102,Maschine,2025-06-03 09:15:11,project_saved
+72,user_103,Traktor Pro,2025-06-05 10:30:45,track_loaded
+73,user_101,Komplete Kontrol,2025-06-06 11:00:00,preset_loaded
+74,user_104,Maschine,2025-06-07 14:22:30,app_opened
+75,user_102,Maschine,2025-06-09 15:00:50,track_exported
+76,user_105,Traktor Pro,2025-06-11 18:00:15,app_opened
+77,user_101,Komplete Kontrol,2025-06-13 19:45:00,project_saved
+78,user_103,Traktor Pro,2025-06-14 20:00:00,track_loaded
+79,user_106,Maschine,2025-06-16 08:30:00,app_opened
+80,user_101,Komplete Kontrol,2025-07-02 09:00:00,preset_loaded
+81,user_102,Maschine,2025-07-04 12:00:00,project_saved
+82,user_107,Traktor Pro,2025-07-06 13:00:00,app_opened
+83,user_104,Maschine,2025-07-08 16:00:00,track_exported
+84,user_101,Komplete Kontrol,2025-07-11 10:00:00,app_opened
+85,user_105,Traktor Pro,2025-07-13 21:00:00,track_loaded
+86,user_102,Maschine,2025-07-16 11:00:00,app_opened
+87,user_108,Komplete Kontrol,2025-07-19 22:00:00,preset_loaded
+88,user_103,Traktor Pro,2025-07-21 23:00:00,project_saved
+89,user_106,Maschine,2025-07-23 14:00:00,track_exported
+90,user_101,Komplete Kontrol,2025-07-26 17:00:00,app_opened
+91,user_107,Traktor Pro,2025-07-29 18:00:00,track_loaded
+92,user_102,Maschine,2025-08-03 09:20:15,app_opened
+93,user_101,Komplete Kontrol,2025-08-04 10:00:30,preset_loaded
+94,user_109,Traktor Pro,2025-08-06 11:00:00,app_opened
+95,user_104,Maschine,2025-08-07 12:30:00,project_saved
+96,user_101,Komplete Kontrol,2025-08-09 14:00:00,track_exported
+97,user_102,Maschine,2025-08-11 15:00:00,app_opened
+98,user_105,Traktor Pro,2025-08-13 16:00:00,track_loaded
+99,user_110,Komplete Kontrol,2025-08-14 17:00:00,app_opened
+100,user_103,Traktor Pro,2025-08-16 18:00:00,project_saved
+101,user_102,Komplete Kontrol,2025-06-01 12:00:00,app_opened
+102,user_103,Maschine,2025-06-01 13:00:00,app_opened
+103,user_104,Traktor Pro,2025-06-01 14:00:00,app_opened
+104,user_105,Maschine,2025-06-02 16:00:00,app_opened
+105,user_106,Traktor Pro,2025-06-03 17:00:00,app_opened
+106,user_107,Komplete Kontrol,2025-06-03 18:00:00,app_opened
+107,user_108,Maschine,2025-07-01 19:00:00,app_opened
+108,user_109,Komplete Kontrol,2025-07-01 20:00:00,app_opened
+109,user_110,Traktor Pro,2025-07-02 21:00:00,app_opened
+110,user_111,Maschine,2025-07-02 22:00:00,app_opened
+111,user_112,Komplete Kontrol,2025-07-03 23:00:00,app_opened
+112,user_101,Maschine,2025-07-03 08:00:00,app_opened
+113,user_103,Komplete Kontrol,2025-08-01 09:00:00,app_opened
+114,user_104,Traktor Pro,2025-08-01 10:00:00,app_opened
+115,user_105,Komplete Kontrol,2025-08-02 11:00:00,app_opened
+116,user_106,Maschine,2025-08-02 12:00:00,app_opened
+117,user_107,Traktor Pro,2025-08-03 13:00:00,app_opened
+118,user_108,Maschine,2025-08-03 14:00:00,app_opened
+119,user_109,Komplete Kontrol,2025-08-04 15:00:00,app_opened
+120,user_110,Maschine,2025-08-04 16:00:00,app_opened

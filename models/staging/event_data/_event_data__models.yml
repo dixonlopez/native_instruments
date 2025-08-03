@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: base_product_usage__events
+    description: "Cleansed and formatted raw product usage events. This is the foundational model for all usage analysis."
+    columns:
+      - name: event_id
+        description: "The unique identifier for each event."
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: "The unique identifier for a user."
+        tests:
+          - not_null
+      - name: product_id
+        description: "The identifier for the product being used."
+        tests:
+          - not_null
+      - name: occurred_at
+        description: "The timestamp when the event occurred."
+        tests:
+          - not_null
+  
+  - name: stg_daily_user_activity
+    description: "An incremental model that calculates the distinct active users per product for each completed day. This is the primary building block for usage metrics."
+    columns:
+      - name: activity_date
+        tests:
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
