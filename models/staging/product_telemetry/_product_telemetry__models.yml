@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: base_registrations
+    description: "Cleansed and casted registration data from the product telemetry source."
+    columns:
+      - name: usage_id
+        tests:
+          - unique
+          - not_null
+  - name: base_product_usage
+    description: "Cleansed and casted product usage data from the product telemetry source."
+    columns:
+      - name: usage_id
+        tests:
+          - unique
+          - not_null

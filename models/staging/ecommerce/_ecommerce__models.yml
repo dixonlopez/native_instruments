@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: base_products
+    description: "Cleansed and casted product data from the e-commerce source."
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+  - name: base_sales_orders
+    description: "Cleansed and casted sales order data from the e-commerce source."
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
