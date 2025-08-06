@@ -4,7 +4,13 @@
 {{
     config(
         materialized='incremental',
-        unique_key='line_id'
+        unique_key='line_id',
+        partition_by={
+            "field": "entry_month",
+            "data_type": "date",
+            "granularity": "month"
+        },
+        cluster_by=['account_name', 'account_type', 'financial_statement']
     )
 }}
 
@@ -28,6 +34,7 @@ final as (
     select 
         line_id,
         entry_date,
+        DATE_TRUNC(entry_date, MONTH) AS entry_month,
         journal_id,
         journal_name,
         line_description,
