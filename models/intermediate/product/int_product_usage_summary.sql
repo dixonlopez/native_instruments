@@ -1,7 +1,13 @@
 {{
     config(
         materialized='incremental',
-        unique_key=['metric_date', 'product_id', 'metric_type']
+        unique_key=['metric_date', 'product_id', 'metric_type'],
+        partition_by={
+            "field": "metric_date",
+            "data_type": "date",
+            "granularity": "day"
+        },
+        cluster_by=['product_id', 'metric_type']
     )
 }}
 
